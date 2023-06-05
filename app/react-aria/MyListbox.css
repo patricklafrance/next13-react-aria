@@ -1,0 +1,50 @@
+.my-listbox {
+    max-height: inherit;
+    overflow: auto;
+    padding: 2px;
+    border: 1px solid var(--spectrum-global-color-gray-400);
+    border-radius: 6px;
+    background: var(--page-background);
+    outline: none;
+    max-width: 250px;
+    max-height: 300px;
+    box-sizing: border-box;
+  }
+  
+  .my-item {
+    --highlight: #e70073;
+  
+    margin: 2px;
+    padding: 0.286rem 0.571rem;
+    border-radius: 6px;
+    outline: none;
+    cursor: default;
+    color: var(--spectrum-global-color-gray-800);
+    font-size: 1.072rem;
+  
+    &.selected {
+      background: var(--highlight);
+      color: white;
+    }
+  
+    &.focused {
+      box-shadow: 0 0 0 2px var(--page-background), 0 0 0 4px var(--highlight);
+    }
+  }
+  
+  @media (forced-colors: active) {
+    .my-listbox {
+      forced-color-adjust: none;
+      border-color: ButtonBorder;
+      background: Canvas;
+    }
+  
+    .my-item {
+      color: ButtonText;
+      --highlight: Highlight;
+  
+      &.selected {
+        color: HighlightText;
+      }
+    }
+  }
