@@ -3,6 +3,7 @@
 import "./MySelect.css"
 
 import { Item, type ItemProps, Label, Select, type SelectProps, SelectValue, Text } from "react-aria-components";
+import type { ReactNode } from "react";
 
 import { MyButton } from "./MyButton";
 import { MyListBox } from "./MyListbox";
@@ -12,7 +13,7 @@ interface MySelectProps<T extends object> extends SelectProps<T> {
     label?: string;
     description?: string;
     errorMessage?: string;
-    children: React.ReactNode;
+    children: ReactNode;
   }
   
 export function MySelect<T extends object>(
